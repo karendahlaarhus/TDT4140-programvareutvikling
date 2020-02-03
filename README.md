@@ -1,3 +1,3 @@
 # 25
 
-Dette er en test for å finne ut hvordan gitlab fungerer
+Dette er en test for å finne ut hvordan gitlab fungerer. Endres dette nå?
