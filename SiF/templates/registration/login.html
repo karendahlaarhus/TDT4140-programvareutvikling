@@ -6,18 +6,24 @@
 </head>
 <body>
 <!-- templates/registration/login.html -->
-<!-- templates/registration/login.html -->
 {% extends 'base.html' %}
 
 {% block title %}Login{% endblock %}
 
 {% block content %}
-<h2>Login</h2>
+<h2>Login som beboer</h2>
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Login</button>
 </form>
+<!-- /admin -->
+
+<h2>Vil du heller logge inn som admin?</h2>
+<form method="get" action="/admin">
+    <button type="submit">Login som admin</button>
+</form>
+
 {% endblock %}
 
 </body>
