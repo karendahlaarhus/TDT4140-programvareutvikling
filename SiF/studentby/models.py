@@ -6,3 +6,5 @@ from django.db import models
 class studentby(models.Model):
     navn = models.CharField(max_length=50)
     adresse = models.CharField(max_length=200)
+    def __str__(self):
+        return self.navn

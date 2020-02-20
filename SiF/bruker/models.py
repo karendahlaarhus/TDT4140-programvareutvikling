@@ -9,5 +9,7 @@ class bruker(models.Model):
     isManager = models.BooleanField()
     studentby = studentby()
     kollektiv = models.ForeignKey(kollektiv(), on_delete=models.CASCADE)
+    def __str__(self):
+        return self.brukernavn
 
 

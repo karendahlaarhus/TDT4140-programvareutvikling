@@ -8,4 +8,6 @@ from studentby.models import studentby
 class kollektiv(models.Model):
     kollektivNr = models.IntegerField(null=False)
     studentby = models.ForeignKey(studentby(),on_delete=models.CASCADE)
+    def __str__(self):
+        return self.studentby.__str__()+" "+str(self.kollektivNr)
 
