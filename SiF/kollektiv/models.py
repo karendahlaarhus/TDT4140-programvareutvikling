@@ -1,5 +1,5 @@
 from django.db import models
-from SiF.studentby.models import studentby
+from studentby.models import studentby
 
 
 
@@ -7,5 +7,5 @@ from SiF.studentby.models import studentby
 
 class kollektiv(models.Model):
     kollektivNr = models.IntegerField(null=False)
-    studentby = models.ForeignKey(studentby, on_delete=models.CASCADE())
+    studentby = models.ForeignKey(studentby(),on_delete=models.CASCADE)
 

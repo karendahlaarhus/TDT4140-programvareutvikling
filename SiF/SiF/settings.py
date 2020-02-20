@@ -31,6 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'kollektiv.apps.KollektivConfig',
+    'bruker.apps.BrukerConfig',
+    'studentby.apps.StudentbyConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
