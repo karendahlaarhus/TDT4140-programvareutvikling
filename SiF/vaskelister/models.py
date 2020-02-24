@@ -6,6 +6,7 @@ from django.db import models
 from SiF.studentby.models import studentby
 from SiF.kollektiv.models import kollektiv
 
+
 class TaskList(models.Model):
     name = models.CharField(max_length=30)
     studentby = models.ForeignKey(studentby, on_delete=models.CASCADE)
