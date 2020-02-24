@@ -1,9 +1,11 @@
 from django.contrib import admin
 
-# Register your models here.
-
 from .models import studentby
 from kollektiv.models import kollektiv
+
+admin.site.site_header = "SiF vaskelister adminside"
+admin.site.site_title = "Adminside"
+admin.site.site_index = "Side for administering av studentbyer og brukere"
 
 class ChoiceInLine(admin.StackedInline):
     model = kollektiv
