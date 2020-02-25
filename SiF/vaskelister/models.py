@@ -21,10 +21,6 @@ from django import forms
 #
 #         # Prevents (at the database level) creation of two lists with the same kollektiv in the same studentby
 #         unique_together = ("kollektiv", "studentby")
-class TodoForm(models.Model):
-    text = forms.CharField(max_length=40,
-                           widget=forms.TextInput(
-                               attrs={'class' : 'form-control', 'placeholder' : 'Hva er det som skal vaskes?', 'aria-label' : 'Todo', 'aria-describedby' : 'add-btn'}))
 
 class Task(models.Model):
     text = models.CharField(max_length=40)

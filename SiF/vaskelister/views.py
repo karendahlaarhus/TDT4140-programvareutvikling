@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
 from django.views.decorators.http import require_POST
 
-from .models import Task, TodoForm
+from .models import Task
+from .forms import TodoForm
 
 def index(request):
     todo_list = Task.objects.order_by('id')
