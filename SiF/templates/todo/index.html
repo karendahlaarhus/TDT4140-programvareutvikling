@@ -19,7 +19,7 @@
             <div class="col-lg-4 col-lg-offset-4" id="content">
                 <h2>VASKELISTEN FOR DITT KOLLEKTIV</h2>
                 {% if user.is_authenticated %}
-                <form action="{% url 'add' %}" method="POST" role="form">
+                <form action="{% url 'addTodo' %}" method="POST" role="form">
                     {% csrf_token %}
                     <div class="form-group">
                         <div class="input-group">
