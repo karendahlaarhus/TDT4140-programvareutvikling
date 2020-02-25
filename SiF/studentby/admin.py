@@ -1,5 +1,12 @@
 from django.contrib import admin
 
+import django.contrib.auth.admin
+import django.contrib.auth.models
+from django.contrib import auth
+
+admin.site.unregister(auth.models.User)
+admin.site.unregister(auth.models.Group)
+
 from .models import studentby
 from kollektiv.models import kollektiv
 
@@ -13,5 +20,7 @@ class ChoiceInLine(admin.StackedInline):
 
 class studentbyAdmin(admin.ModelAdmin):
     inlines = [ChoiceInLine]
+    search_fields = ('navn',)
 
 admin.site.register(studentby, studentbyAdmin)
+
