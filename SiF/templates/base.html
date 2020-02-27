@@ -1,3 +1,4 @@
+{% load static %}
 <!-- templates/base.html -->
 <!DOCTYPE html>
 <html lang="en">
@@ -10,24 +11,27 @@
 </head>
 <body>
 <header>
-    <img src="/static/img/PUlogo.png" class ="logo" alt="logo">
     <div class="container">
+        <b>Studenterskipnaden i Fredrikstad</b>
     <nav>
         <ul>
             <li><a href="{% url 'logout' %}">home</a></li>
             <li><a href="{% url 'login' %}">login</a></li>
         </ul>
-
     </nav>
     </div>
 </header>
 
+
+
 </body>
 {% block content %}{% endblock %}
 </html>
-{% load static %}
 
+
+<!--
 {% block extrahead %}
-<!-- CSS and JavaScripts for django-todo -->
+&lt;!&ndash; CSS and JavaScripts for django-todo &ndash;&gt;
 <link rel="stylesheet" type="text/css" href="{% static 'todo/css/styles.css' %}" />
 {% endblock extrahead %}
+-->

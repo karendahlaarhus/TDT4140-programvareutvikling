@@ -19,10 +19,10 @@ class LoginView(TemplateView):
                    return render(request, 'bruker/test.html', {'text': "Velkommen til managersiden"})
                return render(request, 'bruker/test.html', {'text': "Velkommen til beboersiden"})
            else:
-               return render(request, 'bruker/login.html', {'form': form, 'text': 'Ugyldig passord'})
+               return render(request, 'registration/login.html', {'form': form, 'text': 'Ugyldig passord'})
        except bruker.DoesNotExist:
            form = BrukerForm()
-           return render(request, 'bruker/login.html', {'form': form, 'text': 'Ugyldig brukernavn'})
+           return render(request, 'registration/login.html', {'form': form, 'text': 'Ugyldig brukernavn'})
 
 
 
