@@ -13,10 +13,7 @@
 {% block content %}
 {% if user.is_authenticated %}
 <body>
-Hi {{ user.username }}!
-Du ser bra ut idag
 <img src ="/static/img/PUlogo.png" class ="frontpagelogo" alt = "frontpagelogo">
-<p><a href="{% url 'logout' %}">logout</a></p>
 <form method="get" action="/admin">
     <button type="submit" class="submit">Login som admin</button>
 </form>
