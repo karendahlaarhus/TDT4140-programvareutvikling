@@ -3,8 +3,10 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+
     <link rel="stylesheet" href="{ static css/styles.css }">
-    <title>base</title>
+    <title>{% block title %}Studentsamskipnaden i Fredrikstad{% endblock %}</title>
+
 </head>
 <body>
 <header>
@@ -23,3 +25,9 @@
 </body>
 {% block content %}{% endblock %}
 </html>
+{% load static %}
+
+{% block extrahead %}
+<!-- CSS and JavaScripts for django-todo -->
+<link rel="stylesheet" type="text/css" href="{% static 'todo/css/styles.css' %}" />
+{% endblock extrahead %}

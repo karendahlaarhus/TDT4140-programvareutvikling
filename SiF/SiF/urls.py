@@ -16,10 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic.base import TemplateView # new
+from django.contrib.auth import views as auth_views #views for å logge inn/ut med annet enn admin
+from bruker.views import LoginView
 
 urlpatterns = [
-    path('vaskelister/', include('vaskelister.urls')),
+    path('', include('vaskelister.urls')),
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
-    path('', TemplateView.as_view(template_name='home.html'), name='home'),
+    path('login/',LoginView.as_view(template_name='bruker/login.html'), name='login'),
 ]
