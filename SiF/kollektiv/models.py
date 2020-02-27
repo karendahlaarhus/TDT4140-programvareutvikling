@@ -14,6 +14,7 @@ class kollektiv(models.Model):
         constraints = [
             models.UniqueConstraint(fields=['kollektivNr','studentby'], name='unique_kollektiv'),
         ]
+        verbose_name_plural = "Kollektiv"
 
 
 

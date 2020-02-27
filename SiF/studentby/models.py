@@ -8,3 +8,5 @@ class studentby(models.Model):
     adresse = models.CharField(max_length=200)
     def __str__(self):
         return self.navn
+    class Meta:
+        verbose_name_plural = "Studentbyer"
