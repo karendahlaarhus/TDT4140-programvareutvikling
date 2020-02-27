@@ -17,7 +17,9 @@ class LoginView(TemplateView):
            if passord_skrevet==b.passord:
                if b.isManager:
                    return render(request, 'bruker/test.html', {'text': "Velkommen til managersiden"})
-               return render(request, 'bruker/test.html', {'text': "Velkommen til beboersiden"})
+               else:
+                   kollektiv = b.kollektiv
+                   return render(request, 'bruker/test.html', {'text': "Velkommen til beboersiden", 'navn': brukernavn_skrevet, 'kollektiv': kollektiv})
            else:
                return render(request, 'bruker/login.html', {'form': form, 'text': 'Ugyldig passord'})
        except bruker.DoesNotExist:
