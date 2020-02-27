@@ -1,14 +1,25 @@
 <!-- templates/base.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>{% block title %}Django Auth Tutorial{% endblock %}</title>
+    <link rel="stylesheet" href="{ static css/styles.css }">
+    <title>base</title>
 </head>
 <body>
-<main>
-    {% block content %}
-    {% endblock %}
-</main>
+<header>
+    <img src="/static/img/PUlogo.png" class ="logo" alt="logo">
+    <div class="container">
+    <nav>
+        <ul>
+            <li><a href="{% url 'logout' %}">home</a></li>
+            <li><a href="{% url 'login' %}">login</a></li>
+        </ul>
+
+    </nav>
+    </div>
+</header>
+
 </body>
+{% block content %}{% endblock %}
 </html>
