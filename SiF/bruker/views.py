@@ -6,7 +6,7 @@ from .models import bruker
 class LoginView(TemplateView):
     def get(self, request):
         form = BrukerForm()
-        return render(request, 'bruker/login.html',{'form': form})
+        return render(request, 'registration/login.html',{'form': form})
     def post(self, request):
        form = BrukerForm(request.POST)
        #brukernavn_skrevet = form.fields['Brukernavn'] Dette funket ikke av en eller annen grunn
