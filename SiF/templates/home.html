@@ -5,7 +5,6 @@
     <link rel="stylesheet" href="/static/css/styles.css">
     <title>Login</title>
 </head>
-<body>
 <!-- templates/home.html-->
 {% extends 'base.html' %}
 
@@ -13,13 +12,22 @@
 
 {% block content %}
 {% if user.is_authenticated %}
+<body>
 Hi {{ user.username }}!
 Du ser bra ut idag
+<img src ="/static/img/PUlogo.png" class ="frontpagelogo" alt = "frontpagelogo">
 <p><a href="{% url 'logout' %}">logout</a></p>
+<form method="get" action="/admin">
+    <button type="submit" class="submit">Login som admin</button>
+</form>
+</body>
 {% else %}
-<p>You are not logged in</p>
-<a href="{% url 'login' %}">login</a>
+<body>
+<img src ="/static/img/PUlogo.png" class ="frontpagelogo" alt = "frontpagelogo">
+<form method="get" action="/admin">
+    <button type="submit"  class="submit">Login som admin</button>
+</form>
+</body>
 {% endif %}
 {% endblock %}
-</body>
 </html>
