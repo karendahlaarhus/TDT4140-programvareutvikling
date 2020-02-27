@@ -1,11 +1,3 @@
 # 25
 
-Dette er en test for å finne ut hvordan gitlab fungerer. 
-
-Endres dette nå?
-
-hei
-
-
-helo
-
+Programvare som gjør at SiF kan holde oversikt over vasking i sine kollektiv.
