@@ -8,5 +8,11 @@
 {{text}}, {{navn}}! Hvordan står det til i {{kollektiv}}?
 <br>
 <u>Her er vaskelisten for ditt kollektiv:</u>
+{% if vaskeliste%}
+{% view 'vaskeliste:index' vaske_liste=vaskeliste %}
+{% else %}
+<h6>Det er ingen vaskeliste koblet til ditt kollektiv :(</h6>
+{% endif %}
+
 </body>
 </html>

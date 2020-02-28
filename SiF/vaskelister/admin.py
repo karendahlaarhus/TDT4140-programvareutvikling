@@ -9,7 +9,7 @@ class ChoiceInLine(admin.StackedInline):
 
 class vaskelisteAdmin(admin.ModelAdmin):
     inlines = [ChoiceInLine]
-    #search_fields = (Vaskeliste.__str__(self),) vil kunne søke på vaskelister etter tostringen, men fungerer ikke
+    #search_fields = (Vaskeliste.__str__(self),) vil kunne søke på vaskelister etter tostringen, men fungerer ikke (ikke viktig)
 
 admin.site.register(Vaskeliste, vaskelisteAdmin)
 

@@ -1,15 +1,16 @@
 from django.shortcuts import render, redirect
 from django.views.decorators.http import require_POST
 
-from .models import Task
+from .models import Task, Vaskeliste
 from .forms import TodoForm
 
-def index(request):
-    todo_list = Task.objects.order_by('id')
+def index(request, vaskeliste_id):
+    vaske_liste = Vaskeliste.objects.get(pk=vaskeliste_id)
+    todo_list = Task.objects.filter(vaskeliste=vaske_liste)
     form = TodoForm()
     context = {'todo_list' : todo_list, 'form' : form}
-
     return render(request, 'todo/index.html', context)
+
 
 @require_POST
 def addTodo(request):

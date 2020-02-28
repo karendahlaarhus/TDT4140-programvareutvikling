@@ -1,7 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import TemplateView
 from .forms import BrukerForm
 from .models import bruker
+from vaskelister.models import Vaskeliste
+from vaskelister.views import index as todoIndex
 
 class LoginView(TemplateView):
     def get(self, request):
@@ -19,7 +21,12 @@ class LoginView(TemplateView):
                    return render(request, 'bruker/managerside.html', {'text': "Velkommen til managersiden", 'navn': brukernavn_skrevet})
                else:
                    kollektiv = b.kollektiv
-                   return render(request, 'bruker/beboerside.html', {'text': "Velkommen til beboersiden", 'navn': brukernavn_skrevet, 'kollektiv': kollektiv})
+                   try:
+                       vaskeliste = Vaskeliste.objects.get(kollektiv=kollektiv)
+                       url = 'http://127.0.0.1:8000/'+str(vaskeliste.id)
+                       return redirect(url)
+                   except vaskeliste.DoesNotExist:
+                       return render(request,'bruker/beboerside.html',{'text': "Velkommen til beboersiden",'navn': brukernavn_skrevet,'kollektiv': kollektiv})
            else:
                return render(request, 'bruker/login.html', {'form': form, 'text': 'Ugyldig passord'})
        except bruker.DoesNotExist:
