@@ -23,7 +23,7 @@ class LoginView(TemplateView):
                    kollektiv = b.kollektiv
                    try:
                        vaskeliste = Vaskeliste.objects.get(kollektiv=kollektiv)
-                       url = 'http://127.0.0.1:8000/'+str(vaskeliste.id)
+                       url = 'http://127.0.0.1:8000/vask/'+str(vaskeliste.id)
                        return redirect(url)
                    except vaskeliste.DoesNotExist:
                        return render(request,'bruker/beboerside.html',{'text': "Velkommen til beboersiden",'navn': brukernavn_skrevet,'kollektiv': kollektiv})
