@@ -15,8 +15,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.views.generic.base import TemplateView # new
-from django.contrib.auth import views as auth_views #views for å logge inn/ut med annet enn admin
 from bruker.views import LoginView
 
 urlpatterns = [
