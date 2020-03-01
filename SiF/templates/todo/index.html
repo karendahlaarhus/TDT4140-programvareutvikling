@@ -1,4 +1,19 @@
 {% load static %}
+
+<header>
+    <div class="container">
+        <b>Studentsamskipnaden i Fredrikstad</b>
+    <nav>
+        <ul>
+            <li><a href="{% url 'logout' %}">HOME</a></li>
+            {% if user.is_authenticated %}
+            {% endif %}
+        </ul>
+    </nav>
+    </div>
+</header>
+
+
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -33,6 +48,7 @@
         <div class="row pad">
             <div class="col-lg-12 text-center">
                 Velkommen hjem - <strong>Studentsamskipnaden i Fredrikstad</strong>
+                <img src ="/static/img/PUlogo.png" class ="vaskelistelogo" alt = "vaskelistelogo">
             </div>
         </div>
     </footer>

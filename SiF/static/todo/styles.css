@@ -1,12 +1,12 @@
 body {
-	background: rgba(100, 0, 0, .8);
+	background: #242C34;
 	font-family: 'cursive', 'Futura', sans-serif;
 }
 #wrapper {
 	margin-top: 10% !important;
 }
 #content {
-	background: cadetblue;
+	background: #C2D2C4;
 	padding: 30px;
 }
 #content > h2 {
@@ -32,3 +32,10 @@ footer {
 	color: black;
 }
 
+.vaskelistelogo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: 250px;
+}
