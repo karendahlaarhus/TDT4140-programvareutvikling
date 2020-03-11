@@ -7,8 +7,7 @@ from .forms import TodoForm
 def index(request, vaskeliste_id):
     vaske_liste = Vaskeliste.objects.get(pk=vaskeliste_id)
     todo_list = Task.objects.filter(vaskeliste=vaske_liste)
-    form = TodoForm()
-    context = {'todo_list' : todo_list, 'form' : form}
+    context = {'todo_list' : todo_list}
     return render(request, 'todo/index.html', context)
 
 
@@ -22,10 +21,14 @@ def addTodo(request):
 
     return redirect('http://127.0.0.1:8000/')
 
-def completeTodo(request, todo_id):
-    todo = Task.objects.get(pk=todo_id)
-    todo.complete = True
-    todo.save()
+def completeTodo(request):
+    print("HEI")
+    if request.method=='POST':
+        print("TEST")
+
+    #todo = Task.objects.get(pk=todo_id)
+    #todo.complete = True
+    #todo.save()
 
     return redirect('http://127.0.0.1:8000/')
 

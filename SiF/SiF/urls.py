@@ -25,7 +25,7 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('login/',LoginView.as_view(template_name='bruker/login.html'), name='login'),
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
-    path('vask/', include('vaskelister.urls')),
+    path('vask/', include('vaskelister.urls', namespace='vask')),
 
 
 ]
