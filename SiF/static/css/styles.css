@@ -2,8 +2,6 @@ body {
     margin: 0;
     background: #C2D2C4;
     font-family: 'cursive', 'Futura', sans-serif;
-
-
 }
 
 .container {
@@ -50,7 +48,6 @@ nav a {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 20px;
-
 }
 
 nav a:hover {
@@ -74,4 +71,13 @@ nav a:hover {
 .submit:hover {
   color: black;
   opacity: 0.7;
+}
+
+.todolist {
+  text-align: left;
+  margin: auto;
+  width: 50%;
+  border: 6px solid #242C34;
+  padding: 10px;
+  align:
 }

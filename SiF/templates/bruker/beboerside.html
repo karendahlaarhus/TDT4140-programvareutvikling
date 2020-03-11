@@ -33,10 +33,11 @@
             <div class="col-lg-4 col-lg-offset-4" id="content">
                 <h2>VASKELISTEN FOR DITT KOLLEKTIV</h2>
                 {%block content%}
+                <center>
                 <p>{{text}}, {{navn}}! Hvordan står det til i {{kollektiv}}?</p>
 
                 {% endblock %}
-                <div class="list-group t20">
+                <div class="todolist">
                     {% for todo in todo_list %}
                         {% if todo.complete %}
                             <input type="checkbox" checked> <label>{{ todo.text }}</label> <br>
@@ -44,7 +45,7 @@
                             <input type="checkbox"> <label>{{ todo.text }}</label> <br>
                         {% endif %}
                     {% endfor %}
-                </div>
+                </div> <center/>
 
 
     <footer>
