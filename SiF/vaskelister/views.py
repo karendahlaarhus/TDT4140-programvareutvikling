@@ -4,7 +4,7 @@ from django.views.decorators.http import require_POST
 from .models import Task, Vaskeliste
 from .forms import TodoForm
 
-def index(request, vaskeliste_id):
+def index(request: object, vaskeliste_id: object) -> object:
     vaske_liste = Vaskeliste.objects.get(pk=vaskeliste_id)
     todo_list = Task.objects.filter(vaskeliste=vaske_liste)
     form = TodoForm()
