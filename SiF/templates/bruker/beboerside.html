@@ -1,18 +1,60 @@
-<!DOCTYPE html>
+{% load static %}
+
+<header>
+    <div class="container">
+        <b>Studentsamskipnaden i Fredrikstad</b>
+    <nav>
+        <ul>
+            <li><a href="{% url 'logout' %}">logout</a></li>
+
+        </ul>
+    </nav>
+    </div>
+</header>
+
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Beboerside</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vaskelisten for ditt kollektiv</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/beboerside.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
 </head>
 <body>
-{{text}}, {{navn}}! Hvordan står det til i {{kollektiv}}?
-<br>
-<u>Her er vaskelisten for ditt kollektiv:</u>
-{% if vaskeliste%}
-{% view 'vaskeliste:index' vaske_liste=vaskeliste %}
-{% else %}
-<h6>Det er ingen vaskeliste koblet til ditt kollektiv :(</h6>
-{% endif %}
+    <div class="container-fluid" id="wrapper">
 
+        <div class="row">
+            <div class="col-lg-4 col-lg-offset-4" id="content">
+                <h2>VASKELISTEN FOR DITT KOLLEKTIV</h2>
+                {%block content%}
+                <center>
+                <p>{{text}}, {{navn}}! Hvordan står det til i {{kollektiv}}?</p>
+
+                {% endblock %}
+                <div class="todolist">
+                    {% for todo in todo_list %}
+                        {% if todo.complete %}
+                            <input type="checkbox" checked> <label>{{ todo.text }}</label> <br>
+                        {% else %}
+                            <input type="checkbox"> <label>{{ todo.text }}</label> <br>
+                        {% endif %}
+                    {% endfor %}
+                </div> <center/>
+
+
+    <footer>
+        <div class="row pad">
+            <div class="col-lg-12 text-center">
+                Velkommen hjem - <strong>Studentsamskipnaden i Fredrikstad</strong>
+                <img src ="/static/img/PUlogo.png" class ="vaskelistelogo" alt = "vaskelistelogo">
+            </div>
+        </div>
+    </footer>
+</div>
 </body>
 </html>
+
