@@ -9,7 +9,7 @@ def index(request: object, vaskeliste_id: object) -> object:
     todo_list = Task.objects.filter(vaskeliste=vaske_liste)
     form = TodoForm()
     context = {'todo_list' : todo_list, 'form' : form}
-    return render(request, 'todo/index.html', context)
+    return render(request, 'bruker/beboerside.html', context)
 
 
 @require_POST
