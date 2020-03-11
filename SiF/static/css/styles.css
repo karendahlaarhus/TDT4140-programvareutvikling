@@ -1,6 +1,9 @@
 body {
     margin: 0;
     background: #C2D2C4;
+    font-family: 'cursive', 'Futura', sans-serif;
+
+
 }
 
 .container {
@@ -9,10 +12,12 @@ body {
 }
 
 header {
+	font-family: 'cursive', 'Futura', sans-serif;
     background: #242C34;
 }
 
 header::after {
+
     content: '';
     display: table;
     clear: both;
@@ -45,6 +50,7 @@ nav a {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 20px;
+
 }
 
 nav a:hover {
