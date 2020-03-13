@@ -21,4 +21,3 @@ class Task(models.Model):
         return self.text
 
 
-

@@ -18,7 +18,7 @@ class LoginView(TemplateView):
            passord_skrevet = request.POST.get('Passord')
            if passord_skrevet==b.passord:
                if b.isManager:
-                   return render(request, 'bruker/managerside.html', {'text': "Velkommen til managersiden", 'navn': brukernavn_skrevet})
+                   return render(request, 'bruker/managerside.html', {'text': "Velkommen til managersiden", 'navn': brukernavn_skrevet, 'manager_for_by':b.kollektiv.studentby,'manager_for_kollektiv':b.kollektiv, 'vaskeliste_id':b.kollektiv.kollektivNr})
                else:
                    kollektiv = b.kollektiv
                    try:
