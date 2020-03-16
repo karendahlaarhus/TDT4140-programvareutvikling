@@ -1,14 +1,15 @@
 from django.shortcuts import render, redirect
 from django.views.decorators.http import require_POST
-
+import datetime
 from .models import Task, Vaskeliste
 from .forms import TodoForm
 
 def index(request: object, vaskeliste_id: object) -> object:
+    week = datetime.datetime.now().strftime("%U")
     vaske_liste = Vaskeliste.objects.get(pk=vaskeliste_id)
     todo_list = Task.objects.filter(vaskeliste=vaske_liste)
     form = TodoForm()
-    context = {'todo_list' : todo_list, 'form' : form}
+    context = {'todo_list' : todo_list, 'form' : form, 'week' : week}
     return render(request, 'bruker/beboerside.html', context)
 
 
