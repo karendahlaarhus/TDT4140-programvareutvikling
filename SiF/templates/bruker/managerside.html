@@ -33,19 +33,16 @@
             <h2>VASKELISTEN FOR DITT KOLLEKTIV</h2>
             {%block content%}
                 <center>
-                <p>{{text}}, {{navn}}! Du har ansvar for {{ manager_for_by }} og {{ manager_for_kollektiv }}.</p>
+                <p>{{text}}! Du er manager for {{manager_for_by}}. Her er listen over dine kollektiv: </p>
 
             {% endblock %}
             <div class="todolist">
-                {% for todo in todo_list %}
-                    {% if todo.complete %}
-                        <input type="checkbox" checked> <label>{{ todo.text }}</label> <br>
-                    {% else %}
-                        <input type="checkbox"> <label>{{ todo.text }}</label> <br>
-                    {% endif %}
+                <br>
+                {% for koll in kollektiv_list %}
+                    <button onclick="myFunction(1)"> {{ koll.studentby }} {{ koll.kollektivNr}} </button> <br> <! –– HER ER PROBLEMET ––>
                 {% endfor %}
+            <br>
             </div> <center/>
-
 
             <footer>
                 <div class="row pad">
@@ -56,5 +53,14 @@
                 </div>
             </footer>
         </div>
+    </div>
+</div>
+
+<script>
+    function myFunction(num) {
+        location.replace("http://127.0.0.1:8000/vask/" + num)
+    }
+</script>
+
 </body>
 </html>

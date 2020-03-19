@@ -3,6 +3,9 @@ from django.views.decorators.http import require_POST
 
 from .models import Task, Vaskeliste
 from .forms import TodoForm
+from kollektiv.models import kollektiv
+from studentby.models import studentby
+from bruker.models import bruker as b
 
 def index(request: object, vaskeliste_id: object) -> object:
     vaske_liste = Vaskeliste.objects.get(pk=vaskeliste_id)
@@ -15,7 +18,6 @@ def index(request: object, vaskeliste_id: object) -> object:
 @require_POST
 def addTodo(request):
     form = TodoForm(request.POST)
-
     if form.is_valid():
         new_todo = Task(text=request.POST['text'])
         new_todo.save()

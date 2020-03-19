@@ -3,10 +3,9 @@ from django.db import models
 from django import forms
 
 from kollektiv.models import kollektiv
-
+from studentby.models import studentby
 
 class Vaskeliste(models.Model):
-
     kollektiv = models.OneToOneField(kollektiv(), on_delete=models.CASCADE, null=True, blank=True) #kun et kollektiv til en vaskeliste
     def __str__(self):
         return str(self.kollektiv)

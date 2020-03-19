@@ -11,6 +11,7 @@ class bruker(models.Model):
     kollektiv = models.ForeignKey(kollektiv(), null=True, on_delete=models.SET_NULL)
     def __str__(self):
         return self.brukernavn
+
     class Meta:
         verbose_name_plural = "Brukere"
 
