@@ -1,13 +1,38 @@
-<!DOCTYPE html>
+{% load static %}
+
+<header>
+    <div class="container">
+        <b>Studentsamskipnaden i Fredrikstad</b>
+    <nav>
+        <ul>
+            <li><a href="{% url 'logout' %}">logout</a></li>
+        </ul>
+    </nav>
+    </div>
+</header>
+
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Managerside</title>
+
+    <title>MangerSite</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/managerside.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
 </head>
 <body>
-{{text}}, {{navn}}!
-<li><a href="{% url 'logout' %}">logout</a></li>
-<br>
+    <div class="container-fluid" id="wrapper">
+        <center><b>Velkommen manager. Her er oversikten over dine studentbyer med tilhørende kollektiv</b><center/>
 
+
+    <footer>
+        <div class="row pad">
+            <div class="col-lg-12 text-center">
+                <center>Velkommen hjem - <strong>Studentsamskipnaden i Fredrikstad</strong><center/>
+                <img src ="/static/img/PUlogo.png" class ="vaskelistelogo" alt = "vaskelistelogo">
+            </div>
+        </div>
+    </footer>
+</div>
 </body>
 </html>
