@@ -39,7 +39,7 @@
             <div class="todolist">
                 <br>
                 {% for koll in kollektiv_list %}
-                    <button onclick="myFunction(1)"> {{ koll.studentby }} {{ koll.kollektivNr}} </button> <br> <! –– HER ER PROBLEMET ––>
+                   <button onclick="myFunction({{ koll.vaskeliste.id }})"> {{ koll.studentby }} {{ koll.kollektivNr}} </button> <br>
                 {% endfor %}
             <br>
             </div> <center/>
