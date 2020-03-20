@@ -33,7 +33,7 @@
             <div class="col-lg-4 col-lg-offset-4" id="content">
                 <h2>VASKELISTEN FOR DITT KOLLEKTIV</h2>
                 <div class="list-group t20">
-                <form action="{% url 'vask:complete' %}" method="post" onsubmit=this.reset()>
+                <form action="{% url 'vask:complete' %}" method="POST">
                 {% csrf_token %}
                     {% for todo in todo_list %}
                         {% if todo.complete %}

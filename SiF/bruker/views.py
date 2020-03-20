@@ -11,7 +11,6 @@ class LoginView(TemplateView):
         return render(request, 'registration/login.html',{'form': form})
     def post(self, request):
        form = BrukerForm(request.POST)
-       #brukernavn_skrevet = form.fields['Brukernavn'] Dette funket ikke av en eller annen grunn
        brukernavn_skrevet = request.POST.get('Brukernavn')
        try:
            b = bruker.objects.get(brukernavn=brukernavn_skrevet)
