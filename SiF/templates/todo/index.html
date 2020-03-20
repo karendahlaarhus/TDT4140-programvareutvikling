@@ -1,0 +1,61 @@
+{% load static %}
+
+<header>
+    <div class="container">
+        <b>Studentsamskipnaden i Fredrikstad</b>
+    <nav>
+        <ul>
+            <li><a href="{% url 'logout' %}">logout</a></li>
+
+        </ul>
+    </nav>
+    </div>
+</header>
+
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vaskelisten for ditt kollektiv</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'todo/bs/css/flatly.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'todo/styles.css' %}" />
+</head>
+<body>
+    <div class="container-fluid" id="wrapper">
+
+        <div class="row">
+            <div class="col-lg-4 col-lg-offset-4" id="content">
+                <h2>VASKELISTEN FOR DITT KOLLEKTIV</h2>
+                <div class="list-group t20">
+                <form action="{% url 'vask:complete' %}" method="POST">
+                {% csrf_token %}
+                    {% for todo in todo_list %}
+                        {% if todo.complete %}
+                            <input type="checkbox" checked name="{{ todo.id }}" value="{{todo.id}}" onchange=this.form.submit() > <label>{{ todo.text }}</label> <br>
+                            <input type="hidden" name="task" value="{{ todo.id }}">
+                        {% else %}
+                            <input type="checkbox" name="{{ todo.id }}" value="{{todo.id}}" onchange=this.form.submit()> <label>{{ todo.text }}</label> <br>
+                            <input type="hidden" name="task" value="{{ todo.id }}">
+                        {% endif %}
+                    {% endfor %}
+                </form>
+                </div>
+
+
+    <footer>
+        <div class="row pad">
+            <div class="col-lg-12 text-center">
+                Velkommen hjem - <strong>Studentsamskipnaden i Fredrikstad</strong>
+                <img src ="/static/img/PUlogo.png" class ="vaskelistelogo" alt = "vaskelistelogo">
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,41 +1,35 @@
 from django.shortcuts import render, redirect
-from django.views.decorators.http import require_POST
-import datetime
-from .models import Task, Vaskeliste
-from .forms import TodoForm
+from django.utils.datastructures import MultiValueDictKeyError
 
-def index(request: object, vaskeliste_id: object) -> object:
-    week = datetime.datetime.now().strftime("%U")
+
+from .models import Task, Vaskeliste
+
+
+def index(request, vaskeliste_id):
     vaske_liste = Vaskeliste.objects.get(pk=vaskeliste_id)
     todo_list = Task.objects.filter(vaskeliste=vaske_liste)
-    form = TodoForm()
-    context = {'todo_list' : todo_list, 'form' : form, 'week' : week}
-    return render(request, 'bruker/beboerside.html', context)
+    context = {'todo_list' : todo_list, 'vaskeliste_id' : vaskeliste_id}
+    return render(request, 'todo/index.html', context)
 
 
-@require_POST
-def addTodo(request):
-    form = TodoForm(request.POST)
+def completeTodo(request):
+    todo_liste = request.POST.getlist("task")
+    task1 = Task.objects.get(pk=todo_liste[0])
+    vaskeliste_id = task1.vaskeliste.id #bare for å få vaskelisten, tok første task men alle vil ha samme
+    print(todo_liste)
+    for todo_id in todo_liste:
+        todo = Task.objects.get(pk=todo_id)
+        checked = False
+        if todo_id in request.POST: #dersom sjekkboksen er checked så vil den være submittet og derfor med i post-dictionarien
+            checked = True
+        if (not checked) and todo.complete:
+            todo.complete = False
+            todo.save()
+        elif checked and (not todo.complete):
+            todo.complete = True
+            todo.save()
+    url = 'http://127.0.0.1:8000/vask/' + str(vaskeliste_id)
+    return redirect(url)
 
-    if form.is_valid():
-        new_todo = Task(text=request.POST['text'])
-        new_todo.save()
 
-    return redirect('http://127.0.0.1:8000/')
 
-def completeTodo(request, todo_id):
-    todo = Task.objects.get(pk=todo_id)
-    todo.complete = True
-    todo.save()
-
-    return redirect('http://127.0.0.1:8000/')
-
-def deleteCompleted(request):
-    Task.objects.filter(complete__exact=True).delete()
-
-    return redirect('http://127.0.0.1:8000/')
-
-def deleteAll(request):
-    Task.objects.all().delete()
-
-    return redirect('http://127.0.0.1:8000/')
