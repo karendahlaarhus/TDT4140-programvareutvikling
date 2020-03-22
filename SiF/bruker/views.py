@@ -6,6 +6,8 @@ from vaskelister.models import Vaskeliste
 from studentby.models import studentby
 from kollektiv.models import kollektiv
 
+
+
 class LoginView(TemplateView):
     def get(self, request):
         form = BrukerForm()
@@ -36,3 +38,4 @@ class LoginView(TemplateView):
        except bruker.DoesNotExist:
            form = BrukerForm()
            return render(request, 'registration/login.html', {'form': form, 'text': 'Ugyldig brukernavn'})
+

@@ -30,14 +30,14 @@
         <div class="row">
             <div class="col-lg-4 col-lg-offset-4" id="content">
                 <h2>VASKELISTEN FOR DITT KOLLEKTIV, UKE {{ week }}</h2>
-                {%block content%}
-                <center>
-                <p>{{text}}, {{navn}}! Hvordan står det til i {{kollektiv}}?</p>
 
+                {%block content%}
+                    <center>
+                    <p>{{text}}, {{navn}}! Hvordan står det til i {{kollektiv}}?</p>
                 {% endblock %}
 
-                    <div class="todolist">
-                    <form action="{% url 'vask:complete' %}" method="POST">
+                <div class="todolist">
+                <form action="{% url 'vask:complete' %}" method="POST">
                 {% csrf_token %}
                     {% for todo in todo_list %}
                         {% if todo.complete %}
@@ -49,7 +49,7 @@
                         {% endif %}
                     {% endfor %}
                 </form>
-                        </div>
+                </div>
 
 
     <footer>
