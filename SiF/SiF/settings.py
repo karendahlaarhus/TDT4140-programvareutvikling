@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'bruker.apps.BrukerConfig',
     'studentby.apps.StudentbyConfig',
     'vaskelister',
-    'django_createsuperuserwithpassword',
 ]
 
 SITE_ID = 1

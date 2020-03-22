@@ -35,15 +35,21 @@
                 <p>{{text}}, {{navn}}! Hvordan står det til i {{kollektiv}}?</p>
 
                 {% endblock %}
-                <div class="todolist">
+
+                    <div class="todolist">
+                    <form action="{% url 'vask:complete' %}" method="POST">
+                {% csrf_token %}
                     {% for todo in todo_list %}
                         {% if todo.complete %}
-                            <input type="checkbox" checked> <label>{{ todo.text }}</label> <br>
+                            <input type="checkbox" checked name="{{ todo.id }}" value="{{todo.id}}" onchange=this.form.submit() > <label>{{ todo.text }}</label> <br>
+                            <input type="hidden" name="task" value="{{ todo.id }}">
                         {% else %}
-                            <input type="checkbox"> <label>{{ todo.text }}</label> <br>
+                            <input type="checkbox" name="{{ todo.id }}" value="{{todo.id}}" onchange=this.form.submit()> <label>{{ todo.text }}</label> <br>
+                            <input type="hidden" name="task" value="{{ todo.id }}">
                         {% endif %}
                     {% endfor %}
-                </div> <center/>
+                </form>
+                        </div>
 
 
     <footer>
