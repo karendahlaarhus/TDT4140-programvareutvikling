@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
-from django.views.decorators.http import require_POST
+from django.utils.datastructures import MultiValueDictKeyError
+
 
 from .models import Task, Vaskeliste
 from .forms import TodoForm
@@ -7,7 +8,8 @@ from kollektiv.models import kollektiv
 from studentby.models import studentby
 from bruker.models import bruker as b
 
-def index(request: object, vaskeliste_id: object) -> object:
+
+def index(request, vaskeliste_id):
     vaske_liste = Vaskeliste.objects.get(pk=vaskeliste_id)
     todo_list = Task.objects.filter(vaskeliste=vaske_liste)
     form = TodoForm()
@@ -34,9 +36,5 @@ def completeTodo(request, todo_id):
 def deleteCompleted(request):
     Task.objects.filter(complete__exact=True).delete()
 
-    return redirect('http://127.0.0.1:8000/')
 
-def deleteAll(request):
-    Task.objects.all().delete()
 
-    return redirect('http://127.0.0.1:8000/')
