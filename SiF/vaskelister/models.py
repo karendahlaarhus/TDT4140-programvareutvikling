@@ -3,7 +3,7 @@ from django.db import models
 from django import forms
 
 class Vaskeliste(models.Model):
-
+    week = models.IntegerField(default=0)
     class Meta:
         verbose_name_plural = "Vaskelister"
 

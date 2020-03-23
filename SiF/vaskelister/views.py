@@ -13,14 +13,20 @@ from bruker.models import bruker as b
 def index(request, vaskeliste_id):
     vaske_liste = Vaskeliste.objects.get(pk=vaskeliste_id)
     todo_list = Task.objects.filter(vaskeliste=vaske_liste)
-    context = {'todo_list' : todo_list, 'vaskeliste_id' : vaskeliste_id}
+    current_week = int(datetime.datetime.now().strftime("%U"))+1
+    if vaske_liste.week != current_week:
+        for todo in todo_list:
+            todo.complete = False
+            todo.save()
+        vaske_liste.week = current_week
+        vaske_liste.save()
+    context = {'todo_list' : todo_list, 'vaskeliste_id' : vaskeliste_id, 'week': vaske_liste.week}
     return render(request, 'bruker/beboerside.html', context)
 
 def completeTodo(request):
     todo_liste = request.POST.getlist("task")
     task1 = Task.objects.get(pk=todo_liste[0])
     vaskeliste_id = task1.vaskeliste.id #bare for å få vaskelisten, tok første task men alle vil ha samme
-    print(todo_liste)
     for todo_id in todo_liste:
         todo = Task.objects.get(pk=todo_id)
         checked = False
