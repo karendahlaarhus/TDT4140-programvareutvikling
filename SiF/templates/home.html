@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <title>Login</title>
+</head>
+<!-- templates/home.html-->
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+<body>
+
+<img src ="/static/img/PUlogo.png" class ="frontpagelogo" alt = "frontpagelogo">
+<!--<p><a href="{% url 'logout' %}">logout</a></p>-->
+
+</body>
+{% else %}
+<body>
+<img src ="/static/img/PUlogo.png" class ="frontpagelogo" alt = "frontpagelogo">
+
+</form>
+</body>
+{% endif %}
+{% endblock %}
+</html>

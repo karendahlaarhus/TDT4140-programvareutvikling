@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/login.css">
+    <title>Login</title>
+</head>
+
+<body>
+<!-- templates/registration/login.html -->
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+<!-- /admin -->
+<br><br><br><br><br>
+    <center><font size="6" color="black">Logg inn som beboer eller manager</font></center>
+    <br><br><br>
+<form  method="post">
+    <center>
+    {% csrf_token %}
+    {{ form.as_p }}</center>
+<center><button type="submit">Login</button></center>
+<center> {{text}}</center>
+</form>
+
+<br><br>
+<img src ="/static/img/PUlogo.png" class ="loginlogo" alt = "loginlogo">
+<br><br><br><br><br>
+<form method="get" action="/admin">
+    <button type="submit"  class="submit">Login som admin</button>
+
+{% endblock %}
+
+</body>
+</html>

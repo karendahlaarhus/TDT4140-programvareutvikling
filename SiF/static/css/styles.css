@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    background: #C2D2C4;
+    font-family: 'cursive', 'Futura', sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+	font-family: 'cursive', 'Futura', sans-serif;
+    background: #242C34;
+}
+
+header::after {
+
+    content: '';
+    display: table;
+    clear: both;
+}
+
+b {
+    color: #FFFFFF;
+    display: inline-block;
+    margin-left: 0px;
+    padding-top: 25px;
+    font-size: 20px;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 10px;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+nav a:hover {
+    color: black;
+}
+
+.frontpagelogo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: 800px;
+}
+
+.submit {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.submit:hover {
+  color: black;
+  opacity: 0.7;
+}
+
+.todolist {
+  text-align: left;
+  margin: auto;
+  width: 50%;
+  border: 6px solid #242C34;
+  padding: 10px;
+}
