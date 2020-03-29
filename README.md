@@ -1,3 +1,3 @@
 # 25
 
-Nå er det opprettet et django-prosjekt i denne branchen :) 
+Programvare som gjør at SiF kan holde oversikt over vasking i sine kollektiv.
