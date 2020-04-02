@@ -1,11 +1,14 @@
-from django.urls import reverse
+
 from django.db import models
-from django import forms
 
 class Vaskeliste(models.Model):
+    name = models.CharField(max_length=20, default="Ukjent", null=False)
     week = models.IntegerField(default=0)
     class Meta:
         verbose_name_plural = "Vaskelister"
+    def __str__(self):
+        return self.name
+
 
 class Task(models.Model):
     text = models.CharField(max_length=40)

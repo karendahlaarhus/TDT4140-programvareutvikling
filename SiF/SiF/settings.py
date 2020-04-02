@@ -38,9 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    'kollektiv.apps.KollektivConfig',
-    'bruker.apps.BrukerConfig',
-    'studentby.apps.StudentbyConfig',
+    'kollektiv',
+    'bruker',
+    'studentby',
     'vaskelister',
 ]
 

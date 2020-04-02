@@ -20,6 +20,7 @@ class ChoiceInLine(admin.StackedInline):
     model = kollektiv
     extra = 3
 
+
 class studentbyAdmin(admin.ModelAdmin):
     inlines = [ChoiceInLine]
     search_fields = ('navn',)
