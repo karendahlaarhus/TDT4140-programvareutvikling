@@ -2,14 +2,15 @@ from django.contrib import admin
 
 
 from .models import Task, Vaskeliste
+from kollektiv.models import kollektiv
 
-class ChoiceInLine(admin.StackedInline):
+class TaskInLine(admin.StackedInline):
     model = Task
     extra = 3
 
 class vaskelisteAdmin(admin.ModelAdmin):
-    inlines = [ChoiceInLine]
-    #search_fields = (Vaskeliste.__str__(self),) vil kunne søke på vaskelister etter tostringen, men fungerer ikke (ikke viktig)
+    fields = ['name']
+    inlines = [TaskInLine]
 
 admin.site.register(Vaskeliste, vaskelisteAdmin)
 
