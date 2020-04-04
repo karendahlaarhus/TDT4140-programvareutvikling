@@ -49,7 +49,7 @@ sudo easy-install pip
 sudo pip install django
 ```
 
-###Kjøre applikasjonen
+##Kjøre applikasjonen
 
 Følg disse instruksene for å kunne kjøre applikasjonen på din maskin.
 
@@ -73,16 +73,16 @@ virtualenv venv
 . source/bin/activate
 ```
 
-4. Oppdater databasen med
+4. Oppdater databasen
 
 ```bash
 python3 manage.py migrate
 ```
 
-5. Kjør programmet
+5. Kjør programmet med følgende kommando.
 
 ```bash
 python3 manage.py runserver
 ```
 
-Så kan du besøke nettsiden på localhost:8000, i hvilken som helst nettleser.
+Nå kan du besøke nettsiden på localhost:8000, i hvilken som helst nettleser.
