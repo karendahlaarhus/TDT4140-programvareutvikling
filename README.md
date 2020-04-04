@@ -1,4 +1,3 @@
-nettleser.
 # Gruppe 25 - Vaskeoversikten
 
 Vaskeoversikten er en nettapplikasjon utviklet for Studentsamskipnaden i Fredrikstad.
@@ -18,13 +17,11 @@ DBMSen vår er SQLite. Prosjektets front-end er utviklet kun med HTML og CSS.
 
 ## Komme i gang
 
-###Forutsetninger
-
 For å kunne kjøre applikasjonen lokalt trenger du Git, Python versjon 3.6+, og Django installert på din enhet. Følgende
 beskrivelse av installasjon antar at enheten kjører på Linux/Mac OS. Hvis din enhet bruker Windows, anbefaler vi at du laster ned 
 [Git for windows](https://gitforwindows.org)
 
-###Installasjon av forutsetninger
+##Installasjon av forutsetninger
 
 Hvis du allerede har installert kravene nevnt ovenfor, kan du hoppe til 'kjøre applikasjonen'.
 
