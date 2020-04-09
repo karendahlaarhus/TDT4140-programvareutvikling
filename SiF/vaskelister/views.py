@@ -20,7 +20,7 @@ def index(request, vaskeliste_id):
             todo.save()
         vaske_liste.week = current_week
         vaske_liste.save()
-    context = {'todo_list' : todo_list, 'vaskeliste_id' : vaskeliste_id, 'week': vaske_liste.week}
+    context = {'todo_list' : todo_list, 'week': vaske_liste.week}
     return render(request, 'bruker/beboerside.html', context)
 
 def completeTodo(request):

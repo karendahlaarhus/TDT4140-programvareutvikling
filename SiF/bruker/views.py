@@ -31,8 +31,8 @@ class LoginView(TemplateView):
                        vaskeliste = Vaskeliste.objects.get(kollektiv=b.kollektiv)
                        url = 'http://127.0.0.1:8000/vask/'+str(vaskeliste.id)
                        return redirect(url)
-                   except vaskeliste.DoesNotExist:
-                       return render(request,'bruker/beboerside.html',{'text': "Velkommen til beboersiden",'navn': brukernavn_skrevet,'kollektiv': kollektiv})
+                   except Vaskeliste.DoesNotExist:
+                       return render(request,'bruker/beboerside.html')
            else:
                return render(request, 'registration/login.html', {'form': form, 'text': 'Ugyldig passord'})
        except bruker.DoesNotExist:
