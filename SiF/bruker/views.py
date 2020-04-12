@@ -13,7 +13,7 @@ class LoginView(TemplateView):
         form = BrukerForm()
         return render(request, 'registration/login.html',{'form': form})
     def post(self, request):
-       form = BrukerForm(request.POST)
+       form = BrukerForm()
        brukernavn_skrevet = request.POST.get('Brukernavn')
        try:
            b = bruker.objects.get(brukernavn=brukernavn_skrevet)
@@ -36,6 +36,5 @@ class LoginView(TemplateView):
            else:
                return render(request, 'registration/login.html', {'form': form, 'text': 'Ugyldig passord'})
        except bruker.DoesNotExist:
-           form = BrukerForm()
            return render(request, 'registration/login.html', {'form': form, 'text': 'Ugyldig brukernavn'})
 

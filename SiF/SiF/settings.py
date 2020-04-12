@@ -36,7 +36,7 @@ NOSE_ARGS = [
     '--cover-package='
     'studentby.models, studentby.views, studentby.urls, '
     'kollektiv.models, kollektiv.views, '
-    'bruker.models, bruker.views, '
+    'bruker.models, bruker.views, bruker.forms, '
     'vaskelister.models, vaskelister.views, vaskelister.urls,'
     'SiF.urls',
 ]

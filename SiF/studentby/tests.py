@@ -5,7 +5,7 @@ from kollektiv.models import kollektiv
 
 
 
-class TestView(TestCase):
+class TestStudentbyView(TestCase):
     def test_index_view(self):
         #setup:
         studentby.objects.create(navn="Test", adresse="Testeveien")
@@ -28,9 +28,7 @@ class TestView(TestCase):
 
 
 
-        #response = c.post('/login/', {'Brukernavn': 'manager1', 'Passord': 'passord'}, follow=True)
-        #self.assertTemplateUsed(response, 'bruker/managerside.html')
-        #respons.content
+
 
 
 
