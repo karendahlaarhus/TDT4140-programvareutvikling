@@ -1,4 +1,4 @@
-# Gruppe 25 - Vaskeoversikten
+# Gruppe 25 - Vaskeliste for SiF
 
 Vaskeoversikten er en nettapplikasjon utviklet for Studentsamskipnaden i Fredrikstad.
 Vi fikk i oppdrag å utvikle en applikasjon som kan la eierne av en studentby holde oversikt
@@ -6,8 +6,8 @@ over deres beboere, og hvor godt de utfører sine vaskeoppgaver.
 
 ## Motivasjon
 
-Produktet ble utviklet for faget TDT4140 - Programvareutvikling. I dette faget skal en Stud.Ass
-opptre som kunde, i dette tilfellet CEO for Studentsamskipnaden i Fredrikstad, og gruppen skal utvikle et
+Produktet ble utviklet for faget TDT4140 - Programvareutvikling. I dette faget opptrer en studentassistent
+som kunde, i dette tilfellet CEO for Studentsamskipnaden i Fredrikstad, og gruppen skal utvikle et
 produkt for denne kunden. 
 
 ## Rammeverk
