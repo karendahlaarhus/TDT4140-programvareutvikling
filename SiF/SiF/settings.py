@@ -27,6 +27,19 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'testserver']
 
+#for Code Coverage rapport:
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+
+# Tell nose to measure coverage on the spesific apps
+NOSE_ARGS = [
+    '--with-coverage',
+    '--cover-package='
+    'studentby.models, studentby.views, studentby.urls, '
+    'kollektiv.models, kollektiv.views, '
+    'bruker.models, bruker.views, '
+    'vaskelister.models, vaskelister.views, vaskelister.urls,'
+    'SiF.urls',
+]
 
 # Application definition
 
@@ -42,6 +55,7 @@ INSTALLED_APPS = [
     'bruker',
     'studentby',
     'vaskelister',
+    'django_nose',
 ]
 
 SITE_ID = 1
