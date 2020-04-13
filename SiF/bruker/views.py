@@ -18,7 +18,7 @@ class LoginView(TemplateView):
        try:
            b = bruker.objects.get(brukernavn=brukernavn_skrevet)
            passord_skrevet = request.POST.get('Passord')
-           if passord_skrevet==b.passord:
+           if passord_skrevet == b.passord:
                if b.isManager:
                    try:
                        correctKollektiv = kollektiv.objects.get(studentby=b.kollektiv.studentby, kollektivNr=b.kollektiv.kollektivNr)
