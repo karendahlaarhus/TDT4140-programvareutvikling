@@ -86,3 +86,32 @@ python3 manage.py runserver
 ```
 
 Nå kan du besøke nettsiden på localhost:8000, i hvilken som helst nettleser.
+
+## Test applikasjonen
+
+Gruppen har implementert code coverage for å teste prosjektets back-end. For å utføre 
+testene må man ha django-nose og code coverage installert. Hvis du allerede har disse installert
+kan du hoppe til steg 3.
+
+1. Last ned django-nose med 
+```bash
+pip install django-nose
+```
+
+2. Last så ned coverage, som kan generere test-rapporter
+```bash
+pip install Coverage
+```
+
+3. Filene man ønsker å teste ligger i listen NOSE_ARGS i settings.py. Om du vil teste
+flere filer enn de som er der må du legge de til i listen.
+
+4. Pass på at du er i mappen '25'. Derfra kan du kjøre testen på alle filene
+
+```bash
+python SiF/manage.py test
+```
+
+Om du ønsker å teste én spesifik fil er det bare å legge til filnavnet etter 'test'.
+
+
