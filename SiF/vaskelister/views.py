@@ -1,13 +1,8 @@
 from django.shortcuts import render, redirect
-from django.utils.datastructures import MultiValueDictKeyError
 import datetime
 
-
 from .models import Task, Vaskeliste
-from .forms import TodoForm
-from kollektiv.models import kollektiv
-from studentby.models import studentby
-from bruker.models import bruker as b
+
 
 
 def index(request, vaskeliste_id):
