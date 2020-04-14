@@ -1,6 +1,6 @@
-# Gruppe 25 - Vaskeoversikten
+# Gruppe 25 - Vaskelister for SiF
 
-Vaskeoversikten er en nettapplikasjon utviklet for Studentsamskipnaden i Fredrikstad.
+Vaskelister er en nettapplikasjon utviklet for Studentsamskipnaden i Fredrikstad.
 Vi fikk i oppdrag å utvikle en applikasjon som kan la eierne av en studentby holde oversikt
 over deres beboere, og hvor godt de utfører sine vaskeoppgaver.
 
@@ -89,29 +89,55 @@ Nå kan du besøke nettsiden på localhost:8000, i hvilken som helst nettleser.
 
 ## Test applikasjonen
 
-Gruppen har implementert code coverage for å teste prosjektets back-end. For å utføre 
-testene må man ha django-nose og code coverage installert. Hvis du allerede har disse installert
-kan du hoppe til steg 3.
+Gruppen har implementert code coverage for å teste prosjektets back-end. Med coverage får
+vi testet 90% av koden vår. For å kunne kjøre testene trenger du kun å installere coverage 
+med pip. 
 
-1. Last ned django-nose med 
-```bash
-pip install django-nose
-```
-
-2. Last så ned coverage, som kan generere test-rapporter
-```bash
-pip install Coverage
-```
-
-3. Filene man ønsker å teste ligger i listen NOSE_ARGS i settings.py. Om du vil teste
-flere filer enn de som er der må du legge de til i listen.
-
-4. Pass på at du er i mappen '25'. Derfra kan du kjøre testen på alle filene
+For å teste applikasjonen, cd inn i mappen 'SiF' og kjør følgende kommando:
 
 ```bash
-python SiF/manage.py test
+python manage.py test
 ```
 
 Om du ønsker å teste én spesifik fil er det bare å legge til filnavnet etter 'test'.
 
+For en mer detaljert rapport om testresultatene, test på følgende måte:
+
+```bash
+coverage erase
+```
+
+Dette sletter testdatabasen. Cd inn i mappen 'SiF', og Kjør så selve testen med
+
+```bash
+coverage run --source="." manage.py test
+```
+
+Herfra kan du hente en mer detaljert rapport over alle filene med:
+
+```bash
+coverage report
+```
+
+Hvis du kun ønsker å se rapporten på visse filer, kan det også gjøres
+
+```bash
+coverage report -m --include="Navn på fil 1", "Navn på fil 2", etc
+```
+
+### Lisens
+
+MIT © Matega
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation
+files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, 
+copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom 
+the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE 
+WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR 
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
