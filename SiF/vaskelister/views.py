@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect
 import datetime
-
 from .models import Task, Vaskeliste
 
 

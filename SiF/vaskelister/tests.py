@@ -59,7 +59,7 @@ class TestVaskelisteView(TestCase):
         self.assertTrue((len(task_liste) == 2) and (self.task3 in task_liste) and (self.task4 in task_liste))
 
         # Tester at vaskelisten har blitt endret riktig
-        #self.assertEquals(self.v2.week, self.current_week) #En vaskelistes uke skal være inneværende uke
+        self.assertEquals(self.v2.week, self.current_week) #En vaskelistes uke skal være inneværende uke
         self.assertFalse(self.task3.complete) # Ingen tasks i vaskelisten skal være complete lenger
         self.assertFalse(self.task4.complete)
 
