@@ -1,4 +1,4 @@
-# Gruppe 25 - Vaskelister for SiF
+# Gruppe 25 - Vaskelister for SiF [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
 Vaskelister er en nettapplikasjon utviklet for Studentsamskipnaden i Fredrikstad.
 Vi fikk i oppdrag å utvikle en applikasjon som kan la eierne av en studentby holde oversikt
@@ -6,8 +6,8 @@ over deres beboere, og hvor godt de utfører sine vaskeoppgaver.
 
 ## Motivasjon
 
-Produktet ble utviklet for faget TDT4140 - Programvareutvikling. I dette faget skal en Stud.Ass
-opptre som kunde, i dette tilfellet CEO for Studentsamskipnaden i Fredrikstad, og gruppen skal utvikle et
+Produktet ble utviklet for faget TDT4140 - Programvareutvikling. I dette faget opptrer en studentassistent
+som kunde, i dette tilfellet CEO for Studentsamskipnaden i Fredrikstad. Gruppen har i oppgave å utvikle et
 produkt for denne kunden. 
 
 ## Rammeverk
@@ -17,36 +17,11 @@ DBMSen vår er SQLite. Prosjektets front-end er utviklet kun med HTML og CSS.
 
 ## Komme i gang
 
-For å kunne kjøre applikasjonen lokalt trenger du Git, Python versjon 3.6+, og Django installert på din enhet. Følgende
-beskrivelse av installasjon antar at enheten kjører på Linux/Mac OS. Hvis din enhet bruker Windows, anbefaler vi at du laster ned 
-[Git for windows](https://gitforwindows.org).
-
-### Installasjon av forutsetninger
-
-Hvis du allerede har installert kravene nevnt ovenfor, kan du hoppe til 'kjøre applikasjonen'.
-
-1. For å installere Python, skriv følgende inne i terminalen:
+Pass på at du har installert [Python 3.7](https://www.python.org/downloads/) med nyeste versjon av [pip](https://pip.pypa.io/en/stable/installing/#upgrading-pip). 
+Med pip installert kan du lett installere django i terminalen med 
 
 ```bash
- sudo apt-get intall python
-```
-
-2. På MacOS kan du installere Git med følgende kommando
-
-```bash
-git --version
-```
-
-3. Og pip kan lett installeres med 
-
-```bash
-sudo easy-install pip
-```
-
-4. Til slutt må man ha Django.
-
-```bash
-sudo pip install django
+pip install django
 ```
 
 ### Kjøre applikasjonen
@@ -119,7 +94,7 @@ Herfra kan du hente en mer detaljert rapport over alle filene med:
 coverage report
 ```
 
-Hvis du kun ønsker å se rapporten på visse filer, kan det også gjøres
+Hvis du kun ønsker å se rapporten på visse filer, kan det også gjøres:
 
 ```bash
 coverage report -m --include="Navn på fil 1", "Navn på fil 2", etc
