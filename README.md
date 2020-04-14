@@ -24,9 +24,14 @@ Med pip installert kan du lett installere django i terminalen med
 pip install django
 ```
 
+Sjekk også at du har Git installert med 
+
+```bash
+git --version
+```
 ### Kjøre applikasjonen
 
-Følg disse instruksene for å kunne kjøre applikasjonen på din maskin.
+Følg disse instruksene for å kjøre applikasjonen lokalt.
 
 1. Klon vårt Git Repo fra terminalen
 
@@ -34,7 +39,7 @@ Følg disse instruksene for å kunne kjøre applikasjonen på din maskin.
 git clone https://gitlab.stud.idi.ntnu.no/tdt4140-2020/25.git
 ```
 
-2. Gå inn i prosjekt-mappen 
+2. Cd inn i prosjekt-mappen 
 
 ```bash
 cd 25
@@ -62,11 +67,19 @@ python3 manage.py runserver
 
 Nå kan du besøke nettsiden på localhost:8000, i hvilken som helst nettleser.
 
+For å kunne bruke applikasjonen
+
 ## Test applikasjonen
 
 Gruppen har implementert code coverage for å teste prosjektets back-end. Med coverage får
 vi testet 90% av koden vår. For å kunne kjøre testene trenger du kun å installere coverage 
 med pip. 
+
+For å kjøre disse testene trenger du Coverage. Dette kan installeres med 
+
+```bash
+pip install Coverage
+```
 
 For å teste applikasjonen, cd inn i mappen 'SiF' og kjør følgende kommando:
 
