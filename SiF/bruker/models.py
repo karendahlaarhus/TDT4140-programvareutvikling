@@ -1,6 +1,5 @@
 from django.db import models
 from kollektiv.models import kollektiv
-from studentby.models import studentby
 
 
 class bruker(models.Model):

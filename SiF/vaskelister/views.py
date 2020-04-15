@@ -1,13 +1,7 @@
 from django.shortcuts import render, redirect
-from django.utils.datastructures import MultiValueDictKeyError
 import datetime
-
-
 from .models import Task, Vaskeliste
-from .forms import TodoForm
-from kollektiv.models import kollektiv
-from studentby.models import studentby
-from bruker.models import bruker as b
+
 
 
 def index(request, vaskeliste_id):
@@ -20,7 +14,7 @@ def index(request, vaskeliste_id):
             todo.save()
         vaske_liste.week = current_week
         vaske_liste.save()
-    context = {'todo_list' : todo_list, 'vaskeliste_id' : vaskeliste_id, 'week': vaske_liste.week}
+    context = {'todo_list' : todo_list, 'week': vaske_liste.week}
     return render(request, 'bruker/beboerside.html', context)
 
 def completeTodo(request):

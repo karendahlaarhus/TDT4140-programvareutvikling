@@ -25,7 +25,7 @@ SECRET_KEY = 'c-n*mujx^jbhu8vu5ld6()r!2k$d150s)0tjowehmm7yj)0)$!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'testserver']
 
 
 # Application definition
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'bruker',
     'studentby',
     'vaskelister',
+    #'django_nose',
 ]
 
 SITE_ID = 1
