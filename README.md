@@ -17,7 +17,7 @@ DBMSen vår er SQLite. Prosjektets front-end er utviklet kun med HTML og CSS.
 
 ## Kodestandard
 
-Gruppen har så langt fulgt [PEP-8 standarden](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=2ahUKEwjrga2Uh-joAhUJ0aYKHTinAhkQFjAAegQIAxAB&url=https%3A%2F%2Fwww.python.org%2Fdev%2Fpeps%2Fpep-0008%2F&usg=AOvVaw0xCyNbAyoecmbLoILApdrP)
+Gruppen følger [PEP-8 standarden](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=2ahUKEwjrga2Uh-joAhUJ0aYKHTinAhkQFjAAegQIAxAB&url=https%3A%2F%2Fwww.python.org%2Fdev%2Fpeps%2Fpep-0008%2F&usg=AOvVaw0xCyNbAyoecmbLoILApdrP)
 for Python.
 
 ## Screenshots
@@ -82,7 +82,7 @@ virtualenv venv
 python3 manage.py migrate
 ```
 
-5. Kjør programmet med følgende kommando.
+5. Kjør programmet med følgende kommando
 
 ```bash
 python3 manage.py runserver
@@ -92,7 +92,7 @@ Nå kan du besøke nettsiden på localhost:8000, i hvilken som helst nettleser.
 
 PS: Om python3 skaper problemer, prøv de samme kommandoene med 'python' istedet.
 
-6. For å kunne ta i bruk applikasjonen må du lage en admin-bruker med 'createsuperuser':
+6. For å kunne ta i bruk applikasjonen må du lage en admin-bruker med 'createsuperuser'
 
 ```bash
 python3 manage.py createsuperuser
@@ -109,15 +109,15 @@ er på 90%.
 pip install Coverage
 ```
 
-For å teste applikasjonen, cd inn i mappen 'SiF' og kjør følgende kommando:
+For å teste applikasjonen, cd inn i mappen 'SiF' og kjør følgende kommando
 
 ```bash
 python3 manage.py test
 ```
 
-Om du ønsker å teste én spesifik fil er det bare å legge til filnavnet etter 'test'.
+Om du ønsker å teste én spesifik fil er det bare å legge til filnavnet etter 'test'
 
-For en mer detaljert rapport om testresultatene, test på følgende måte:
+For en mer detaljert rapport om testresultatene, test på følgende måte
 
 ```bash
 coverage erase
@@ -129,13 +129,13 @@ Dette sletter testdatabasen. Cd inn i mappen 'SiF', og Kjør så selve testen me
 coverage run --source="." manage.py test
 ```
 
-Herfra kan du hente en mer detaljert rapport over alle filene med:
+Herfra kan du hente en mer detaljert rapport over alle filene med
 
 ```bash
 coverage report
 ```
 
-Hvis du kun ønsker å se rapporten på visse filer, kan det også gjøres:
+Hvis du kun ønsker å se rapporten på visse filer, kan det også gjøres
 
 ```bash
 coverage report -m --include="Navn på fil 1", "Navn på fil 2", etc
