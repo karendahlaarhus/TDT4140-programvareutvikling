@@ -40,9 +40,9 @@ for Python.
 
 Bilde 1: Forside
 
-Bilde 2: Beboerside med vaskeliste
+Bilde 2: Login
 
-Bilde 3: Login
+Bilde 3: Beboerside med vaskeliste
 
 Bilde 4: Eksempelfunksjonalitet fra admins perspektiv
 
