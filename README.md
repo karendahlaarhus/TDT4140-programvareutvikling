@@ -22,7 +22,21 @@ for Python.
 
 ## Screenshots
 
+![Forside](https://www.picturepaste.ca/images/2020/04/15/Skjermbilde-2020-04-15-kl.-11.58.33.png)
 
+![Liste](https://www.picturepaste.ca/images/2020/04/15/Skjermbilde-2020-04-15-kl.-11.59.02.png)
+
+![Login](https://www.picturepaste.ca/images/2020/04/15/Skjermbilde-2020-04-15-kl.-12.05.54.png)
+
+![Adminside](https://www.picturepaste.ca/images/2020/04/15/Skjermbilde-2020-04-15-kl.-12.08.30.png)
+
+Bilde 1: Forside
+
+Bilde 2: Beboerside med vaskeliste
+
+Bilde 3: Login
+
+Bilde 4: Eksempelfunksjonalitet fra admins perspektiv
 
 ## Komme i gang
 
