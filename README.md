@@ -22,13 +22,14 @@ for Python.
 
 ## Screenshots
 
-![Forside](https://www.picturepaste.ca/images/2020/04/15/Skjermbilde-2020-04-15-kl.-11.58.33.png)
+<img src="https://www.picturepaste.ca/images/2020/04/15/Skjermbilde-2020-04-15-kl.-11.58.33.png" width=350 height=200>
 
-![Liste](https://www.picturepaste.ca/images/2020/04/15/Skjermbilde-2020-04-15-kl.-11.59.02.png)
+<img src="https://www.picturepaste.ca/images/2020/04/15/Skjermbilde-2020-04-15-kl.-11.59.02.png" width=350 height=200>
 
-![Login](https://www.picturepaste.ca/images/2020/04/15/Skjermbilde-2020-04-15-kl.-12.05.54.png)
+<img src="https://www.picturepaste.ca/images/2020/04/15/Skjermbilde-2020-04-15-kl.-12.05.54.png" width=350 height=200>
 
-![Adminside](https://www.picturepaste.ca/images/2020/04/15/Skjermbilde-2020-04-15-kl.-12.08.30.png)
+<img src="https://www.picturepaste.ca/images/2020/04/15/Skjermbilde-2020-04-15-kl.-12.08.30.png" width=350 height=200>
+
 
 Bilde 1: Forside
 
