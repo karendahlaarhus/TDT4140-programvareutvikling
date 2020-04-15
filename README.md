@@ -24,11 +24,19 @@ for Python.
 
 <img src="https://www.picturepaste.ca/images/2020/04/15/Skjermbilde-2020-04-15-kl.-11.58.33.png" width=350 height=200>
 
+<br/><br/>
+
 <img src="https://www.picturepaste.ca/images/2020/04/15/Skjermbilde-2020-04-15-kl.-11.59.02.png" width=350 height=200>
+
+<br/><br/>
 
 <img src="https://www.picturepaste.ca/images/2020/04/15/Skjermbilde-2020-04-15-kl.-12.05.54.png" width=350 height=200>
 
+<br/><br/>
+
 <img src="https://www.picturepaste.ca/images/2020/04/15/Skjermbilde-2020-04-15-kl.-12.08.30.png" width=350 height=200>
+
+<br/><br/>
 
 
 Bilde 1: Forside
