@@ -110,8 +110,7 @@ Fyll inn ønsket brukernavn og passord. Dette blir din admin-login.
 
 ## Test applikasjonen
 
-Gruppen har implementert code coverage for å se testdekningen for prosjektet. Testdekningen
-er på 90%. 
+Gruppen har implementert code coverage for å se testdekningen for prosjektet. 
 
 ```bash
 pip install Coverage
