@@ -49,13 +49,13 @@ Bilde 4: Eksempelfunksjonalitet fra admins perspektiv
 ## Komme i gang
 
 Pass på at du har installert [Python 3.7](https://www.python.org/downloads/) med nyeste versjon av [pip](https://pip.pypa.io/en/stable/installing/#upgrading-pip). 
-Med pip installert kan du lett installere django i terminalen med 
+Med pip installert kan du lett installere django i terminalen med:
 
 ```bash
 pip install django
 ```
 
-Sjekk også at du har Git installert med 
+Sjekk også at du har Git installert med: 
 
 ```bash
 git --version
@@ -64,33 +64,33 @@ git --version
 
 Følg disse instruksene for å kjøre applikasjonen lokalt.
 
-1. Klon vårt Git Repo fra terminalen
+1. Klon vårt Git Repo fra terminalen:
 
 ```bash
 git clone https://gitlab.stud.idi.ntnu.no/tdt4140-2020/25.git
 ```
 
-2. Cd inn i prosjekt-mappen 
+2. Cd inn i prosjekt-mappen: 
 
 ```bash
 cd 25
 cd SiF
 ```
 
-3. Skap og aktiver et virtual environment
+3. Skap og aktiver et virtual environment:
 
 ```bash
 virtualenv venv
 . source/bin/activate
 ```
 
-4. Oppdater databasen
+4. Oppdater databasen:
 
 ```bash
 python3 manage.py migrate
 ```
 
-5. Kjør programmet med følgende kommando
+5. Kjør programmet med følgende kommando:
 
 ```bash
 python3 manage.py runserver
@@ -100,7 +100,7 @@ Nå kan du besøke nettsiden på localhost:8000, i hvilken som helst nettleser.
 
 PS: Om python3 skaper problemer, prøv de samme kommandoene med 'python' istedet.
 
-6. For å kunne ta i bruk applikasjonen må du lage en admin-bruker med 'createsuperuser'
+6. For å kunne ta i bruk applikasjonen må du lage en admin-bruker med 'createsuperuser':
 
 ```bash
 python3 manage.py createsuperuser
@@ -110,39 +110,39 @@ Fyll inn ønsket brukernavn og passord. Dette blir din admin-login.
 
 ## Test applikasjonen
 
-Gruppen har implementert code coverage for å se testdekningen for prosjektet. 
+Gruppen har implementert code coverage for å se testdekningen for prosjektet. Dette installeres med:
 
 ```bash
 pip install Coverage
 ```
 
-For å teste applikasjonen, cd inn i mappen 'SiF' og kjør følgende kommando
+For å teste applikasjonen, cd inn i mappen 'SiF' og kjør følgende kommando:
 
 ```bash
 python3 manage.py test
 ```
 
-Om du ønsker å teste én spesifikk fil er det bare å legge til filnavnet etter 'test'
+Om du ønsker å teste én spesifikk fil er det bare å legge til filnavnet etter 'test'.
 
-For en mer detaljert rapport om testresultatene, test på følgende måte
+For en mer detaljert rapport om testresultatene, test på følgende måte:
 
 ```bash
 coverage erase
 ```
 
-Dette sletter testdatabasen. Cd inn i mappen 'SiF', og Kjør så selve testen med
+Dette sletter testdatabasen. Cd inn i mappen 'SiF', og Kjør så selve testen med:
 
 ```bash
 coverage run --source="." manage.py test
 ```
 
-Herfra kan du hente en mer detaljert rapport over alle filene med
+Herfra kan du hente en mer detaljert rapport over alle filene med:
 
 ```bash
 coverage report
 ```
 
-Hvis du kun ønsker å se rapporten på visse filer, kan det også gjøres
+Hvis du kun ønsker å se rapporten på visse filer, kan det også gjøres:
 
 ```bash
 coverage report -m --include="Navn på fil 1", "Navn på fil 2", etc
