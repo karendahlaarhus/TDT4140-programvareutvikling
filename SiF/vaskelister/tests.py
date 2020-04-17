@@ -6,7 +6,8 @@ class TestVaskelisteView(TestCase):
     def setUp(self):
         self.c = Client()
 
-        self.current_week = int(datetime.datetime.now().strftime("%U")) + 1
+        self.current_week = int(datetime.datetime.now().strftime("%U")) + 1 #gir inneværende uke
+
         # Vaskeliste fra inneværende uke
         Vaskeliste.objects.create(name="Test1", week=self.current_week)
         self.v1 = Vaskeliste.objects.get(name="Test1")
@@ -36,7 +37,7 @@ class TestVaskelisteView(TestCase):
         self.assertTemplateUsed(response, 'bruker/beboerside.html')  # bruker riktig template
         self.assertEquals(self.v1.week, response.context['week'])  # viser riktig uke
         task_liste = response.context['todo_list']
-        self.assertTrue((len(task_liste) == 2) and (self.task1 in task_liste) and (self.task2 in task_liste))
+        self.assertTrue((len(task_liste) == 2) and (self.task1 in task_liste) and (self.task2 in task_liste)) #viser riktig tasks
 
         #Tester at vaskelisten ikke har blitt noe endret
         self.assertEquals(self.v1.week, self.current_week)
@@ -56,7 +57,7 @@ class TestVaskelisteView(TestCase):
         self.assertTemplateUsed(response, 'bruker/beboerside.html')  # bruker riktig template
         self.assertEquals(self.v2.week, response.context['week'])  # viser riktig uke
         task_liste = response.context['todo_list']
-        self.assertTrue((len(task_liste) == 2) and (self.task3 in task_liste) and (self.task4 in task_liste))
+        self.assertTrue((len(task_liste) == 2) and (self.task3 in task_liste) and (self.task4 in task_liste)) #viser riktig tasks
 
         # Tester at vaskelisten har blitt endret riktig
         self.assertEquals(self.v2.week, self.current_week) #En vaskelistes uke skal være inneværende uke

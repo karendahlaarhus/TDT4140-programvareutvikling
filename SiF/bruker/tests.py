@@ -25,7 +25,7 @@ class TestBrukerView(TestCase):
         #Når man skriver inn feil brukernavn, skal man få opp beskrivende tekst på siden
         response = self.c.post('/login/', {'Brukernavn': 'feil', 'Passord': 'passord123'}, follow=True)
         self.assertTemplateUsed(response, 'registration/login.html') #test at view renders riktig template
-        self.assertContains(response, 'Ugyldig brukernavn') #test at you man får opp teksten med Ugyldig brukernavn
+        self.assertContains(response, 'Ugyldig brukernavn') #test at man får opp teksten med Ugyldig brukernavn
 
     def test_wrong_password(self):
         # Når man skriver inn feil passord, skal man få opp beskrivende tekst på siden
@@ -46,12 +46,10 @@ class TestBrukerView(TestCase):
         self.assertRedirects(response, url)
 
     def test_no_vaskeliste(self):
-        # Setup - bruker uten vaskeliste
-
         # Dersom man logger inn med bruker uten tilknyttet vaskeliste skal man få opp passende tekst
         response = self.c.post('/login/', {'Brukernavn': 'testbeboer2', 'Passord': 'passord123'}, follow=True)
         self.assertTemplateUsed(response, 'bruker/beboerside.html')  # test at view renders riktig template
-        self.assertContains(response, 'ingen tilknyttet vaskeliste')  # test at you man får opp passende tekst
+        self.assertContains(response, 'ingen tilknyttet vaskeliste')  # test at man får opp passende tekst
 
 
 

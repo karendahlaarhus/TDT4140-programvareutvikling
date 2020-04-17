@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'bruker',
     'studentby',
     'vaskelister',
-    #'django_nose',
 ]
 
 SITE_ID = 1
@@ -132,7 +131,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static_root/')
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 
-#LOGIN_REDIRECT_URL = 'todo/index'
-#LOGOUT_REDIRECT_URL = 'todo/index'
+
 
 

@@ -4,10 +4,11 @@ from studentby.models import studentby
 from kollektiv.models import kollektiv
 
 
-
 class TestStudentbyView(TestCase):
     def test_index_view(self):
         #setup:
+        c = Client()
+
         studentby.objects.create(navn="Test", adresse="Testeveien")
         s = studentby.objects.get(navn="Test")
         kollektiv.objects.create(kollektivNr=1, studentby=s)
@@ -16,7 +17,6 @@ class TestStudentbyView(TestCase):
         k2 = kollektiv.objects.get(kollektivNr=2, studentby=s)
         bruker.objects.create(brukernavn="manager1", passord="passord", isManager=True, kollektiv=k1)
 
-        c = Client()
 
         #tester at studentbyIndex gir riktig studentby og liste over kollektiv
         url = '/oversikt/'+str(s.id)

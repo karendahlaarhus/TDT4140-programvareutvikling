@@ -1,4 +1,3 @@
-
 from django.db import models
 
 class Vaskeliste(models.Model):
