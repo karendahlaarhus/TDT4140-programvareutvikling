@@ -122,7 +122,7 @@ For å teste applikasjonen, cd inn i mappen 'SiF' og kjør følgende kommando
 python3 manage.py test
 ```
 
-Om du ønsker å teste én spesifik fil er det bare å legge til filnavnet etter 'test'
+Om du ønsker å teste én spesifikk fil er det bare å legge til filnavnet etter 'test'
 
 For en mer detaljert rapport om testresultatene, test på følgende måte
 
